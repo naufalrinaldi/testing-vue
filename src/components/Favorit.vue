@@ -22,9 +22,11 @@
     </div>
     <b-container v-else  >
       <div>
-          <h2>Silahkan login terlebih dahulu untuk menggunakan halaman ini</h2>
-           <img  src="../assets/stop.webp" width="360px" height="240px">
+           <img  src="../assets/login.jpg" width="400px" height="400px">
       </div>
+      <br/>
+      <br/>
+      <br/>
     </b-container>
   </div>
 </template>

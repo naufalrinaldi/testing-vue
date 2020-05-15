@@ -13,7 +13,7 @@
     </div>
     <div class="row">
         <div class="col-md-3" v-for="result in results" :key="result.idMeal" style="text-align: center;">
-           <b-button variant="primary"  style="text-align: left" @click="addFav(result.idMeal,result.strMealThumb,result.strMeal,result.strCategory)"><b-icon icon="star" /> Add Favorite</b-button>
+           <!-- <b-button variant="primary"  style="text-align: left" @click="addFav(result.idMeal,result.strMealThumb,result.strMeal,result.strCategory)"><b-icon icon="star" /> Add Favorite</b-button> -->
           <router-link :to="{ name: 'Detail', params: { id: result.idMeal } }">
           <div class="card" style="width: 15rem; height: 90%;">
             <img class="card-img-top" :src="result.strMealThumb">
@@ -21,6 +21,7 @@
               <h5 class="card-title">{{result.strMeal}}</h5>
              <span class="badge badge-pill badge-primary">{{result.strCategory}}</span>
             </div>
+            <b-button variant="info"  style="text-align: center" @click="addFav(result.idMeal,result.strMealThumb,result.strMeal,result.strCategory)"><b-icon icon="star" /> Add Favorite</b-button>
           </div>
           </router-link>`
         </div>

@@ -9,13 +9,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <router-link to="/" class="nav-link">Homabout</router-link>
+            <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/search" class="nav-link">Search</router-link>
           </li>
             <li class="nav-item">
-            <router-link to="/favorit" class="nav-link">Favorit</router-link>
+            <router-link to="/favorit" class="nav-link">Favorite</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/kategori" class="nav-link">Kategori</router-link>
@@ -38,7 +38,8 @@
      </div>
      <router-link to="/detail/:mId"></router-link>
     </nav>
-    <router-view/>
+    <router-view class="min-vh-100"></router-view>
+        <Footer />
   </div>
 </template>
 
@@ -49,7 +50,6 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'Home',
   components: {
-    // eslint-disable-next-line vue/no-unused-components
     Footer
   },
   computed: {

@@ -1,10 +1,9 @@
 <template>
-<div class="row-footer">
-    <div class="col-md-12 mt-5">
-        <p class="footer">&copy;2020 by Naufal Rinaldi</p>
-        <p class="footer-sub">All Rights Reserved</p>
+<footer id="sticky-footer" class="py-4 text-white">
+    <div class="container text-center">
+      <small>Copyright &copy; Naufal Rinaldi</small>
     </div>
-</div>
+  </footer>
 </template>
 
 <script>
@@ -13,11 +12,18 @@ export default {
 }
 </script>
 <style>
-.row-footer {
-    width: 100%;
-    margin: 0px;
-    padding: 30px;
-    text-align: center;
+#sticky-footer {
+  flex-shrink: none;
+  /* position: absolute; */
+  right: 0;bottom:0;left:0;
+  background-color: rgb(86, 175, 171);
+}
+/* .row-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:fixed;
+    bottom:0;
+    width:100%;
     background-color: rgb(86, 175, 171);
 }
 .footer {
@@ -29,5 +35,5 @@ export default {
     font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #ffffff;
-}
+} */
 </style>

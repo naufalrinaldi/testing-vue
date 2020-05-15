@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import Food from '@/components/Food.vue'
+import Food from '@/components/Home.vue'
 
 export default {
   name: 'Search',

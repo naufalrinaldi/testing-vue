@@ -1,19 +1,16 @@
 <template>
-  <div class="Food">
-      <!-- <h1>This is a search page</h1> -->
+  <div class="foods">
     <div class="row my-5">
-        <center>
-        <div class="form-inline" style="width: 100%;">
-            <div class="form-group mx-sm-2 mb-2" style="width: 100%;">
+        <div class="form-inline" style="width: 100%">
+            <div class="form-group mx-sm-2 mb-2">
                 <input type="text" class="form-control" placeholder="Seach meals by name..." v-model="query">
             </div>
             <button type="submit" class="btn btn-primary mb-2" @click="getResult(query)">Search</button>
         </div>
-        </center>
     </div>
     <div class="row">
         <div class="col-md-3" v-for="result in results" :key="result.idMeal" style="text-align: center;">
-          <div class="card" style="width: 15rem; height: 90%;">
+          <div class="card" style="width: 15rem; height: 90%;" @click="goToDetail(result.idMeal)">
             <img class="card-img-top" :src="result.strMealThumb">
             <div class="card-body">
               <h5 class="card-title">{{result.strMeal}}</h5>
@@ -28,7 +25,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'Food',
+  name: 'Foods',
   data () {
     return {
       msg: 'Search',
@@ -42,6 +39,9 @@ export default {
         console.log(response.data.meals)
         this.results = response.data.meals
       })
+    },
+    goToDetail (mealId) {
+      this.$router.push({ name: 'Detail', params: { mId: mealId } })
     }
   }
 }
